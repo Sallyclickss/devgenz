@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | DevGenZ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in {
+      animation: fadeIn 0.3s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- NAVBAR -->
+  <nav class="flex justify-between items-center px-6 py-4 bg-white shadow-sm fixed w-full top-0 z-50">
+    <a href="index.html" class="text-blue-700 font-medium flex items-center gap-2 hover:text-blue-900 transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+      Back
+    </a>
+    <img src="assets/logo.png" alt="DevGenZ Logo" class="h-16">
+  </nav>
+
+  <!-- HERO -->
+  <section class="pt-28 pb-12 bg-gradient-to-b from-blue-50 to-white text-center">
+    <div class="max-w-3xl mx-auto px-6">
+      <h1 class="text-4xl font-bold text-blue-900 mb-4">Moments that Define DevGenZ</h1>
+      <p class="text-gray-700 text-lg">
+        A glimpse into our journey of empowering the next generation of tech innovators across Northern Nigeria.
+      </p>
+    </div>
+  </section>
+
+  <!-- GALLERY GRID -->
+  <section class="py-16 px-6 max-w-7xl mx-auto">
+    <h2 class="text-3xl font-semibold text-blue-800 text-center mb-10">Photo Highlights</h2>
+
+    <div id="gallery" class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+      <img src="assets/gallery1.jpeg" alt="Cohort 1 Workshop" class="gallery-img w-full h-auto rounded-2xl shadow-sm hover:scale-105 hover:shadow-md transition cursor-pointer">
+      <img src="assets/gallery2.jpeg" alt="Mentorship Session" class="gallery-img w-full h-auto rounded-2xl shadow-sm hover:scale-105 hover:shadow-md transition cursor-pointer">
+      <img src="assets/gallery3.jpeg" alt="Team Collaboration" class="gallery-img w-full h-auto rounded-2xl shadow-sm hover:scale-105 hover:shadow-md transition cursor-pointer">
+      <img src="assets/gallery4.jpeg" alt="Coding Bootcamp" class="gallery-img w-full h-auto rounded-2xl shadow-sm hover:scale-105 hover:shadow-md transition cursor-pointer">
+      <img src="assets/gallery5.jpeg" alt="Project Showcase" class="gallery-img w-full h-auto rounded-2xl shadow-sm hover:scale-105 hover:shadow-md transition cursor-pointer">
+      <img src="assets/gallery6.jpeg" alt="Team Celebration" class="gallery-img w-full h-auto rounded-2xl shadow-sm hover:scale-105 hover:shadow-md transition cursor-pointer">
+      <img src="assets/gallery7.jpeg" alt="Cohort Graduation" class="gallery-img w-full h-auto rounded-2xl shadow-sm hover:scale-105 hover:shadow-md transition cursor-pointer">
+      <img src="assets/training.jpeg" alt="Workshop Activity" class="gallery-img w-full h-auto rounded-2xl shadow-sm hover:scale-105 hover:shadow-md transition cursor-pointer">
+    </div>
+  </section>
+
+  <!-- VIDEO HIGHLIGHTS -->
+  <section class="py-20 bg-gradient-to-b from-white to-blue-50 text-center">
+    <h2 class="text-3xl font-semibold text-blue-800 mb-8">Watch Our Journey</h2>
+    <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-8">
+      <div class="aspect-w-16 aspect-h-9">
+        <iframe class="w-full h-64 rounded-2xl shadow-sm" src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+      </div>
+      <div class="aspect-w-16 aspect-h-9">
+        <iframe class="w-full h-64 rounded-2xl shadow-sm" src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOIN US CTA -->
+  <section class="py-16 bg-blue-900 text-center text-white">
+    <h2 class="text-3xl font-bold mb-4">Be Part of the DevGenZ Story</h2>
+    <p class="text-lg mb-6 max-w-2xl mx-auto">
+      Join our next cohort or volunteer as a mentor to inspire more young women in tech across Northern Nigeria.
+    </p>
+    <a href="contact.html" class="bg-white text-blue-900 font-medium px-6 py-3 rounded-full hover:bg-blue-100 transition">Join Our Next Cohort</a>
+  </section>
+
+   <!-- ✨ FOOTER -->
+  <footer class="bg-blue-900 text-white py-10 text-center">
+    <p class="text-sm">&copy; 2025 DevGenZ. All Rights Reserved.</p>
+  </footer>
+
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 hidden items-center justify-center z-50 fade-in">
+    <img id="lightbox-img" src="" alt="Expanded view" class="max-w-4xl w-11/12 rounded-lg shadow-lg">
+  </div>
+
+  <script>
+    const galleryImages = document.querySelectorAll('.gallery-img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.remove('hidden');
+        lightbox.classList.add('flex');
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.add('hidden');
+      lightbox.classList.remove('flex');
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        lightbox.classList.add('hidden');
+        lightbox.classList.remove('flex');
+      }
+    });
+  </script>
+
+</body>
+</html>

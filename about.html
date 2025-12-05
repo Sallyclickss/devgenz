@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | DevGenZ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="assets/devgenz-logo.png" type="image/png">
+  <style>
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeInUp { animation: fadeInUp 1s ease-out; }
+
+    /* Hover animation for SVG icons */
+    .icon-animate {
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+    .icon-animate:hover {
+      transform: scale(1.1) rotate(5deg);
+      color: #1d4ed8; /* Tailwind's blue-700 */
+    }
+  </style>
+</head>
+
+<body class="font-sans antialiased text-gray-800">
+
+  <nav class="w-full bg-blue-900 text-white fixed top-0 left-0 z-50 shadow-md">
+  <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+    
+    <!-- Back Button -->
+    <button onclick="window.history.back()" 
+      class="flex items-center space-x-2 text-white hover:text-blue-200 transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" 
+           viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+      </svg>
+      <span>Back</span>
+    </button>
+
+    <!-- Logo -->
+    <a href="index.html">
+      <img src="assets/logoW.png" alt="DevGenZ Logo" class="h-16 w-auto">
+    </a>
+  </div>
+</nav>
+
+<div class="h-16"></div>
+
+
+  <!-- 🌍 HERO SECTION -->
+  <section class="relative bg-gradient-to-br from-blue-50 to-white overflow-hidden py-24">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col-reverse lg:flex-row items-center gap-12">
+      
+      <!-- Text -->
+      <div class="lg:w-1/2 text-center lg:text-left animate-fadeInUp">
+        <h1 class="text-5xl font-bold text-blue-900 mb-6 leading-tight">
+          Empowering the Next Generation of Innovators
+        </h1>
+        <p class="text-gray-700 text-lg mb-8">
+          At <span class="font-semibold text-blue-700">DevGenZ</span>, we’re building a movement that equips young minds across Northern Nigeria with technology, creativity, and purpose — shaping the innovators of tomorrow.
+        </p>
+        <a href="#story" class="inline-block bg-blue-700 text-white px-6 py-3 rounded-full hover:bg-blue-800 transition-all">
+          Learn Our Story
+        </a>
+      </div>
+
+      <!-- Image -->
+      <div class="lg:w-1/2 flex justify-center">
+        <img src="assets/stare.jpg" alt="DevGenZ youth in training" class="rounded-2xl shadow-lg w-full max-w-md">
+      </div>
+    </div>
+
+    <!-- Decorative gradient -->
+    <div class="absolute -top-20 -right-20 w-80 h-80 bg-blue-100 rounded-full blur-3xl opacity-50"></div>
+  </section>
+
+  <!-- 📖 OUR STORY -->
+  <section id="story" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-12 items-center">
+      
+      <!-- Image -->
+      <div class="flex justify-center">
+        <img src="assets/graduants.jpeg" alt="DevGenZ team" class="rounded-2xl shadow-md w-full max-w-md">
+      </div>
+
+      <!-- Text -->
+      <div>
+        <h2 class="text-4xl font-bold text-blue-900 mb-6">Our Story</h2>
+        <p class="text-gray-700 mb-6 leading-relaxed">
+          Founded in 2022 by <span class="font-semibold text-blue-700">Ummisalma Aminu Ibrahim</span>, 
+          DevGenZ started as a small initiative to teach teenagers how to build their very own websites. It began as “Teen Tech Web Dev,” and in 2025 evolved into “DevGenZ,” with a renewed purpose — to teach Gen Z women in Northern Nigeria how to code and innovate. Since then, it has grown into a full-fledged technology empowerment movement.
+        </p>
+
+        <div class="space-y-4">
+          <div>
+            <h3 class="text-2xl font-semibold text-blue-800 mb-2">Our Mission</h3>
+            <p class="text-gray-700 leading-relaxed">
+              To bridge the digital divide by equipping Northern youth, especially women, with tech and entrepreneurial skills for the future of work.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold text-blue-800 mb-2">Our Vision</h3>
+            <p class="text-gray-700 leading-relaxed">
+              A Northern Nigeria where innovation thrives — powered by a generation of skilled, confident, and creative youth who build for impact.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 💡 CORE VALUES (SVGs + Animation) -->
+  <section class="py-20 bg-blue-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 text-center">
+      <h2 class="text-4xl font-bold text-blue-900 mb-12">Our Core Values</h2>
+      <div class="grid md:grid-cols-3 gap-10">
+
+        <!-- Innovation -->
+        <div class="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition-all">
+          <div class="flex justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-700 icon-animate" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-semibold text-blue-800 mb-2">Innovation</h3>
+          <p class="text-gray-700">
+            We encourage curiosity and creativity — building bold ideas that solve real-world problems.
+          </p>
+        </div>
+
+        <!-- Collaboration -->
+        <div class="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition-all">
+          <div class="flex justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-700 icon-animate" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 11.5c1.657 0 3-1.343 3-3S13.657 5.5 12 5.5 9 6.843 9 8.5s1.343 3 3 3zM4.5 20.5a7.5 7.5 0 0115 0m-7.5-4a4 4 0 100-8 4 4 0 000 8z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-semibold text-blue-800 mb-2">Collaboration</h3>
+          <p class="text-gray-700">
+            We believe in the power of teamwork and community-driven growth.
+          </p>
+        </div>
+
+        <!-- Empowerment -->
+        <div class="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition-all">
+          <div class="flex justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-700 icon-animate" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 20l9-9-4-4-5 5-5-5-4 4 9 9z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-semibold text-blue-800 mb-2">Empowerment</h3>
+          <p class="text-gray-700">
+            We equip young people with the tools, skills, and confidence to lead and innovate.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- 🕰️ DEVGENZ JOURNEY -->
+<section class="py-20 bg-white relative">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold text-blue-900 mb-12">The DevGenZ Journey</h2>
+
+    <div class="relative border-l-4 border-blue-700 pl-8 space-y-12 text-left">
+      <!-- 2022 -->
+      <div>
+        <h3 class="text-2xl font-semibold text-blue-800">2022 – The Beginning</h3>
+        <p class="text-gray-700 mt-2">
+          DevGenZ started out as <span class="font-semibold">Teen Tech Web Dev</span> — an initiative launched in 2022 to teach teenagers the fundamentals of coding and web development. It was the seed that grew into what we know today as DevGenZ.
+        </p>
+      </div>
+
+      <!-- 2023–2024 -->
+      <div>
+        <h3 class="text-2xl font-semibold text-blue-800">2023–2024 – Quiet Evolution</h3>
+        <p class="text-gray-700 mt-2">
+          For two years, the idea matured quietly — shaping the vision, building community support, and preparing for something greater. The focus shifted toward creating lasting impact through digital empowerment.
+        </p>
+      </div>
+
+      <!-- 2025 -->
+      <div>
+        <h3 class="text-2xl font-semibold text-blue-800">2025 – The Transformation</h3>
+        <p class="text-gray-700 mt-2">
+          In 2025, <span class="font-semibold">Teen Tech Web Dev officially transformed into DevGenZ</span> — a youth-led movement empowering northern women through technology. We launched <span class="font-semibold">Cohort 1</span>, successfully training <span class="font-semibold">9 women</span> in web development and digital literacy.
+        </p>
+      </div>
+
+      <!-- 2026 (Future Plan) -->
+      <div class="opacity-70 border-l-2 border-dashed border-blue-400 pl-6">
+        <h3 class="text-2xl font-semibold text-blue-600">2026 – Scaling Across Northern Nigeria</h3>
+        <p class="text-gray-600 mt-2">
+          DevGenZ plans to expand its reach to <span class="font-semibold">every northern state</span> in Nigeria — empowering hundreds of young women with digital skills and career opportunities. 
+          <br>
+          <span class="italic text-blue-500">By the end of 2026, our goal is to have trained over 400 northern women in technology.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Decorative glow -->
+  <div class="absolute -bottom-10 right-0 w-72 h-72 bg-blue-100 rounded-full blur-3xl opacity-50"></div>
+</section>
+
+<!-- 🌍 VISION 2030 ROADMAP -->
+<section class="py-20 bg-gradient-to-b from-blue-50 to-white relative overflow-hidden">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold text-blue-900 mb-6">Vision 2030</h2>
+    <p class="text-gray-700 max-w-2xl mx-auto mb-16">
+      The journey doesn’t stop in 2026. DevGenZ is building a sustainable ecosystem where northern youth and women can learn, create, and lead in technology — driving innovation across Africa.
+    </p>
+
+    <!-- Roadmap grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 relative">
+      <!-- Goal 1 -->
+      <div class="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+        <div class="flex items-center justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 16h-1v-4h-1m1 4h1m0 0v4h-1v-4m1-4V8a4 4 0 00-8 0v4H3l3.89 7.26A1 1 0 007.76 20h8.48a1 1 0 00.87-.74L21 12h-4v-4a4 4 0 00-4-4z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-blue-800 mb-2">Digital Skills for 5,000 Youth</h3>
+        <p class="text-gray-600">
+          By 2030, we aim to train and mentor over <span class="font-semibold">5,000 young people</span> across Nigeria — creating a generation of digital creators and innovators.
+        </p>
+      </div>
+
+      <!-- Goal 2 -->
+      <div class="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+        <div class="flex items-center justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2-3-.895-3-2 1.343-2 3-2zm0 0V4m0 0a8 8 0 018 8 8 8 0 01-8 8 8 8 0 01-8-8 8 8 0 018-8z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-blue-800 mb-2">Innovation & Web3 Hubs</h3>
+        <p class="text-gray-600">
+          Launch community-driven <span class="font-semibold">tech and Web3 hubs</span> across major northern states — fostering startups, research, and sustainable innovation.
+        </p>
+      </div>
+
+      <!-- Goal 3 -->
+      <div class="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+        <div class="flex items-center justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 7v10a2 2 0 002 2h3l4 3v-8H5a2 2 0 01-2-2V7zm18 4h-5v8l-4-3H5V7a2 2 0 012-2h3l4-3v8h7a2 2 0 012 2v4z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-blue-800 mb-2">Global Collaboration Network</h3>
+        <p class="text-gray-600">
+          Partner with <span class="font-semibold">international tech communities</span> to connect African innovators with global opportunities, mentorship, and funding.
+        </p>
+      </div>
+    </div>
+
+    <!-- Decorative line -->
+    <div class="absolute left-0 right-0 bottom-0 h-1 bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 opacity-70 rounded-full mt-16"></div>
+  </div>
+</section>
+
+
+  <!-- PARTNERS -->
+  <section class="py-20 bg-gradient-to-b from-blue-50 to-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 text-center">
+
+      <h3 class="text-2xl font-semibold text-blue-800 mb-8">Our Partners</h3>
+      <div class="flex flex-wrap justify-center items-center gap-10">
+        <img src="assets/tgib.jpeg" class="h-24 sm:h-32 md:h-32 object-contain grayscale hover:grayscale-0 transition" />
+        <img src="assets/mush.jpeg" class="h-24 sm:h-32 md:h-32 object-contain grayscale hover:grayscale-0 transition" />
+        <img src="assets/nitda.png" class="h-12 sm:h-16 md:h-16 object-contain grayscale hover:grayscale-0 transition" />
+
+      </div>      
+    </div>
+  </section>
+
+
+  <!-- ✨ FOOTER -->
+  <footer class="bg-blue-900 text-white py-10 text-center">
+    <p class="text-sm">&copy; 2025 DevGenZ. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
